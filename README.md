@@ -1,11 +1,8 @@
 <p align="center">
-  <img src="https://github.com/jhonatanffelipe/doom-fire/assets/doom-fire.gif?raw=true" width="400">
+  <img src="https://github.com/jhonatanffelipe/doom-fire/blob/master/assets/doom-fire.gif?raw=true" width="600">
 </p>
 
-# Doom Fire Algorithm Playground
+# Doom Fire Amplementation
 
-A playground of experiments related to the Doom fire effect implemented in JavaScript. Feel free to submit your experiment with a Pull Request.
+Nesse projeto foi realizada a implementação de um algorítimo que renderiza o fogo do jogo Doom. A implemntação foi realizada utilizando Javascript, CSS e HTML.
 
-## Experiments
-
-These people are making this repository **MORE THAN AWESOME**.
