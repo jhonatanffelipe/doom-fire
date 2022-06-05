@@ -1,7 +1,9 @@
 const firePixelsArray = [];
 const fireWidth = 60;
 const fireHeight = 40;
-const debug = false;
+const updateTime = 10;
+let debug = false;
+let maxIntensity = 36;
 const fireColorsPalette = [
   { r: 7, g: 7, b: 7 },
   { r: 31, g: 7, b: 7 },
@@ -46,8 +48,40 @@ function start() {
   createFireDataStructure();
   createFireSource();
   renderFire();
+  setInterval(calculateFirePropagation, updateTime);
+  addEvents();
+}
 
-  setInterval(calculateFirePropagation, 5);
+function addEvents() {
+  document.getElementById("button-debug").addEventListener("click", setDebug);
+  document.getElementById("sub").addEventListener("click", lowerFire);
+  document.getElementById("sum").addEventListener("click", raiseFire);
+  document.getElementById("min-fire").addEventListener("click", stopFire);
+  document.getElementById("max-fire").addEventListener("click", startFire);
+}
+
+function setDebug() {
+  debug = !debug;
+}
+
+function lowerFire() {
+  maxIntensity > 0 ? maxIntensity-- : 0;
+  start();
+}
+
+function raiseFire() {
+  maxIntensity < 36 ? maxIntensity++ : 36;
+  start();
+}
+
+function stopFire() {
+  maxIntensity = 0;
+  start();
+}
+
+function startFire() {
+  maxIntensity = 36;
+  start();
 }
 
 function createFireDataStructure() {
@@ -121,7 +155,7 @@ function createFireSource() {
     const overflowPixelIndex = fireWidth * fireHeight;
     const pixelIndex = overflowPixelIndex - fireWidth + column;
 
-    firePixelsArray[pixelIndex] = 36;
+    firePixelsArray[pixelIndex] = maxIntensity;
   }
 }
 
