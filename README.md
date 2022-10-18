@@ -4,5 +4,5 @@
 
 # Fogo do Doom 
 
-Nesse projeto foi realizada a implementação de um algorítimo que renderiza o fogo do jogo Doom. A implemntação foi realizada utilizando Javascript, CSS e HTML.
+Nesse projeto foi realizada a implementação de um algorítimo que renderiza o fogo do jogo Doom. A implementação foi realizada utilizando Javascript, CSS e HTML.
 
